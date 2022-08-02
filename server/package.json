@@ -7,7 +7,8 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "watch": "nodemon server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "cluster": "pm2 start src/server.js -i max"
   },
   "keywords": [],
   "author": "",
@@ -16,13 +17,14 @@
     "cors": "^2.8.5",
     "csv-parse": "^5.2.0",
     "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "pm2": "^5.2.0",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/supertest": "^2.0.12",
     "jest": "^28.1.2",
-    "nodemon": "^1.3.3",
-    "supertest": "^6.2.3",
-    "clear_jest": "jest --clearCache"
+    "nodemon": "^1.3.3"
   }
 }
+
